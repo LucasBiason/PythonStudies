@@ -5,3 +5,5 @@ celerybeat-schedule
 .vscode/
 .env
 .venv
+*.venv*
+*.venv/*
