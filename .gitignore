@@ -5,5 +5,5 @@ celerybeat-schedule
 .vscode/
 .env
 .venv
-*.venv*
-*.venv/*
+python521/venv/
+python521/venv/*
