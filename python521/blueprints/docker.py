@@ -1,12 +1,16 @@
 
 import flask
 import docker
+from services import decorators
 
 blueprint = flask.Blueprint('docker', __name__)
 connection = docker.DockerClient()
 
 @blueprint.route('/docker', methods=[ 'GET' ])
+@decorators.login_required
+@decorators.loggingroutes
 def get_docker():    
+
     try:
         lista_dockers = connection.containers.list(all=True)
     except Exception as msg:
@@ -26,6 +30,8 @@ def get_docker():
     return flask.render_template('docker.html', context=context)
 
 @blueprint.route('/docker/start/<string:short_id>/', methods=[ 'GET' ])
+@decorators.login_required
+@decorators.loggingroutes
 def start_docker(short_id):
     container = connection.containers.get(short_id)
     if container and container.status != 'running':
@@ -39,6 +45,8 @@ def start_docker(short_id):
     return flask.redirect('/docker')
 
 @blueprint.route('/docker/stop/<string:short_id>/', methods=[ 'GET' ])
+@decorators.login_required
+@decorators.loggingroutes
 def stop_docker(short_id):
     container = connection.containers.get(short_id)
     if container and container.status == 'running':

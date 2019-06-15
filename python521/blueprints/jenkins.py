@@ -1,11 +1,14 @@
 
 import flask
 import jenkins
+from services.decorators import login_required
+
 j = jenkins.Jenkins('http://localhost:8080', 'python521', 'python521')
 
 blueprint = flask.Blueprint('jenkins', __name__)
 
 @blueprint.route('/jenkins', methods=[ 'GET' ])
+@login_required
 def get_jenkins():
     try:
         jobs_list = j.get_jobs()

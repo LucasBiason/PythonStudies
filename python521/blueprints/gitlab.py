@@ -1,6 +1,7 @@
 
 import flask
 import requests
+from services.decorators import login_required
 
 blueprint = flask.Blueprint('gitlab', __name__)
 
@@ -11,6 +12,7 @@ PROJECT_URL = DOMAIN + '/projects/{}/?private_token=' + TOKEN
 COMMITS_URL = DOMAIN + '/projects/{}/repository/commits/?private_token=' + TOKEN
 
 @blueprint.route('/gitlab', methods=[ 'GET' ])
+@login_required
 def get_gitlab():
     res = requests.get(PROJECTS_URL)
     context = {
@@ -26,6 +28,7 @@ def get_gitlab():
 
 
 @blueprint.route('/gitlab/<string:project_id>/commits/', methods=[ 'GET' ])
+@login_required
 def get_commits(project_id):
     project = requests.get(PROJECT_URL.format(project_id))
     print(COMMITS_URL.format(project_id))
