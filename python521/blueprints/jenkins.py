@@ -1,9 +1,8 @@
-
 import flask
 import jenkins
 from services.decorators import login_required
 
-j = jenkins.Jenkins('http://localhost:8080', 'python521', 'python521')
+j = jenkins.Jenkins('http://localhost:8080', 'username', 'senha')
 
 blueprint = flask.Blueprint('jenkins', __name__)
 
@@ -56,4 +55,4 @@ def post_jenkins_update():
 
 
     ##// j.get_whoami()
-    ## j.create_job('4linux-4', jenkins.EMPTY_CONFIG_XML) (para criar)
+    ## j.create_job('new-pipeline', jenkins.EMPTY_CONFIG_XML) (para criar)
