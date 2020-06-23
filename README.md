@@ -1,3 +1,24 @@
 # PythonStudies
 
-Studies for Python Lovers
+Mini Projetos de Cursos, Livros e artigos de python.
+
+Aqui tenho projetos desde python puro focado em padrões, tecnicas avançadas ou simples
+
+(Não utilizo para estudos de IA e Science Data, isso terá o próprio repositório)
+
+
+
+## Design Patterns Python I: Boas práticas de programação
+Pasta: DesignerPatterns
+
+Link: https://cursos.alura.com.br/course/design-patterns-python
+
+Sobre: Projeto de uma cálculadora fiscal para demonstração dos padrões. Cada Pasta é uma aula diferente.
+
+
+## Design Patterns Python II: Boas práticas de programação
+Pasta: DesignerPatterns2
+
+Link: https://cursos.alura.com.br/course/design-patterns-python-2
+
+Sobre: Continuação do primeiro curso.
