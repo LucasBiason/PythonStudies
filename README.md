@@ -22,3 +22,11 @@ Pasta: DesignerPatterns2
 Link: https://cursos.alura.com.br/course/design-patterns-python-2
 
 Sobre: Continuação do primeiro curso.
+
+
+## Python: introdução a ambientes virtuais
+Pasta: Environments
+
+Link: https://cursos.alura.com.br/course/python-ambientes-virtuais
+
+Sobre: Configuração de ambiente para python utilizando como base um sistema de controle de estoque. (pipenv, pyenv, virtualenv)
