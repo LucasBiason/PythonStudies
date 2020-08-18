@@ -5,5 +5,5 @@ celerybeat-schedule
 .vscode/
 .env
 .venv
-python521/venv/
-python521/venv/*
+Environments/src/staticfiles/
+Environments/src/staticfiles/*

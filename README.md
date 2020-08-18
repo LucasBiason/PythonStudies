@@ -30,3 +30,11 @@ Pasta: Environments
 Link: https://cursos.alura.com.br/course/python-ambientes-virtuais
 
 Sobre: Configuração de ambiente para python utilizando como base um sistema de controle de estoque. (pipenv, pyenv, virtualenv)
+
+
+## Python: ambientes virtuais com Docker e ASDF
+Pasta: Environments
+
+Link: https://cursos.alura.com.br/course/python-ambientes-virtuais-docker-asdf
+
+Sobre: Configuração de ambiente para o projeto do curso anterior em Docker

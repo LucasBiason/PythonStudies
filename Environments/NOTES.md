@@ -72,3 +72,26 @@ Atualize o terminal:
 
     source ~/.zshrc
 
+
+** Docker:
+
+Fazer o usuário poder rodar o docker sem sudo:
+
+    sudo usermod -aG docker $USER
+
+Executar:
+
+    docker-compose run app sh -c "python manage.py runserver"
+
+
+
+    
+    db:
+        image: postgres:alpine
+        environment:
+            POSTGRES_USER: blogdmin
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: heckblog
+            PGDATA: /tmp/pgdata
+        volumes:
+            - postgres_data:/tmp/pgdata
